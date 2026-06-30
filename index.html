@@ -836,9 +836,9 @@ function renderMediaItem(item, container) {
       </iframe>`;
   } else if (item.type === 'image') {
     container.innerHTML = `<img src="${item.src}" alt="${item.caption}" style="max-width:100%; max-height:100%; object-fit:contain; border-radius:var(--radius-md);" />`;
-   } else if (item.type === 'link') {
-   container.innerHTML = `<div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:40px;text-align:center;"><div style="font-size:48px;">&#9654;</div><p style="color:var(--color-text-muted);font-size:var(--text-sm);">${item.caption}</p><a href="${item.src}" target="_blank" rel="noopener noreferrer" class="btn-primary">Open Full Playlist on YouTube</a></div>`;
-  
+  } else if (item.type === 'link') {
+    container.innerHTML = `<div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:40px;text-align:center;"><div style="font-size:48px;">&#9654;</div><p style="color:var(--color-text-muted);font-size:var(--text-sm);">${item.caption}</p><a href="${item.src}" target="_blank" rel="noopener noreferrer" class="btn-primary">Open Full Playlist on YouTube</a></div>`;
+  }
 }
 
 closeBtn.addEventListener('click', () => {
